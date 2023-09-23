@@ -29,3 +29,48 @@ litters_df_abs =
 ```
 
 
+Let's import the `FAS_pups.csv` csv using a relative path.
+
+```{r}
+pups_df =
+  read_csv("data/FAS_pups.csv")
+
+pups_df =
+  janitor::clean_names(pups_df)
+```
+
+
+Import the same dataset using an absolute path.
+
+```{r, eval=FALSE}
+pups_df_abs =
+  read_csv("~/Desktop/DS 101/data_wrangling_i/data/FAS_pups.csv")
+
+pups_df_abs =
+  janitor::clean_names(pups_df_abs)
+```
+
+## Look at data
+
+```{r}
+litters_df
+
+head(litters_df)
+
+tail(litters_df)
+```
+
+You can use 'view'
+
+```{r, eval=FALSE}
+view(litters_df)
+```
+
+Look at a data summary
+
+```{r}
+str(litters_df)
+
+skimr::skim(litters_df)
+```
+
